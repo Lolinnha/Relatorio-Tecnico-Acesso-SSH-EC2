@@ -10,6 +10,7 @@
   - [Autora:](#autora)
   - [Sumário](#sumário)
 - [1. Introdução](#1-introdução)
+- [2. Objetivo](#2-objetivo)
 
 
 # 1. Introdução 
@@ -20,5 +21,14 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Desta forma, as instâncias EC2 são altamente escaláveis e flexíveis, auxiliando o usuário a aumentar ou diminuir a sua capacidade computacional de acordo com a sua necessidade de uma forma rápida, prática e menos custosa. 
 
+# 2. Objetivo 
+
+&nbsp;&nbsp;&nbsp;&nbsp;O objetivo deste relatório técnico é fornecer um passo a passo sobre o acesso SSH (Secure Shell) em instâncias EC2 na plataforma da AWS. O relatório destina-se a oferecer orientalhões para garantir a segurança e eficácia do acesso SSH a instância EC2, abordando aspectos como:
+1. Configuração inicial;
+2. Gerenciamento de Chaves;
+3. Configuração de redes;
+4. Conexão com Putty. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ao seguir o passo a passo, pode-se compreender os fundamentos para o acesso SSH em instâncias EC2 de forma segura e bem gerenciada. 
 
 
