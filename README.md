@@ -12,6 +12,7 @@
 - [1. Introdução](#1-introdução)
 - [2. Objetivo](#2-objetivo)
 - [3. Materiais](#3-materiais)
+- [4. Método](#4-método)
 
 
 # 1. Introdução 
@@ -50,3 +51,184 @@
 
 5. GitHub: 
 &nbsp;&nbsp;&nbsp;&nbsp;Plataforma de hospedagem de código e utiliza o controle de versionamento do Git, auxliando no trabalho em conjunto de equipes de desenvolvedores. 
+
+# 4. Método
+
+&nbsp;&nbsp;&nbsp;&nbsp;O método consiste na explicação detalha e de passo a passo para a criação de uma instância na plataforma da AWS. Ao executar o passo a passo, o usuário conseguirá ter acesso SSH em instâncias EC2 na plataforma da AWS. Para ser o mais didático possível, será fornecido apoio visual de todo o processo. 
+
+**1. Acessar AWS:**
+
+<div align = "center">
+<sub> Figura 01 - Acessar conta AWS  </sub>
+<img src="/assets/aws.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo se baseia em acessar a sua conta da AWS. Caso não tenha, cadastre-se para poder seguir o passo a passo corretamente. No caso do exemplo, esta é uma conta estudantil. 
+
+**2. Acessar Painel de Controle:**
+
+<div align = "center">
+<sub> Figura 02 - Acessar Painel de Controle  </sub>
+<img src="/assets/painelControle.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ao entrar na página, encontre o Painel de Controle e escolha a opção a melhor opção que irá favorecer a criação de sua instância. Nesse caso, por ser uma conta estudantil, iremos escolher a opção "AWS Academy Learner Lab [72994]". Nele, selecione o "Módulos" e escolha a opção "Iniciar os laboratórios de aprendizagem da AWS Academy". 
+
+
+**3. Acessar o Lab:**
+
+<div align = "center">
+<sub> Figura 03 - Acessar Learner Lab  </sub>
+<img src="/assets/Lab.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Preste atenção no símbolo vermelho da AWS. Após você clicar em "Start Lab" no menu superior a direita e aguardar alguns segundos, o símbolo vermelho ficará verde e ao clicar nele, você irá acessar o Learner Lab. 
+
+**4. Página Inicial do Console:**
+
+<div align = "center">
+<sub> Figura 04 - Página Inicial do Console  </sub>
+<img src="/assets/paginaConsole.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Você será redirecionado para a Página Inicial do Console, onde iremos buscar na barra de busca pela palavra "EC2", que é a máquina virtual onde iremos executar a nossa primeira instância. Agora, clique no EC2 que você buscou na barra e clique novamente em "Instâncias". 
+
+**5. Instâncias:**
+
+<div align = "center">
+<sub> Figura 05 - Instâncias </sub>
+<img src="/assets/instancias.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Essa página nos mostra quais instâncias temos em execução atualmente e nos permite criar outras instâncias. Clique no botão laranja no canto superior direito da tela chamado "Executar Instâncias". 
+
+**6. Criando Instância:**
+
+<div align = "center">
+<sub> Figura 06 - Criando Instância parte 1  </sub>
+<img src="/assets/instancia1.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Vamos iniciar o processo de criação da nossa instância. Primeiro, iremos escolher o "Norte da Virgínia" como o data center que iremos criar essa instância. Entenda que mesmo que esse processo seja realizado em nuvem, virtualmente falando, existe um data center real que iremos usufruir de seus serviços. Nesse caso, criaremos nossa instância no data center da AWS localizado em Norte da Virgínia. Também existe um localizado em São Paulo. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;Agora, daremos um nome para a instância. No meu caso, irei colocar "inst-anna". 
+
+<div align = "center">
+<sub> Figura 07 - Imagens de aplicação e de sistema operacional  </sub>
+<img src="/assets/instancia2.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Vamos escolher a configuração do software, ou seja, o sistema operacional para executar a instância. No meu caso, escolhei o Amazon Linux, mas sinta-se à vontade para escolher outro sistema que melhor te favoreça. 
+
+<div align = "center">
+<sub> Figura 08 - Tipo de Instância e Par de chaves  </sub>
+<img src="/assets/instancia3.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Na área de Tipo de instância, podemos continuar com o t2.micro, pois é qualidade para o nível gratuito (e neste caso como estamos somente testando, não precisamos de grande poder computacional). Abaixo, temos Par de Chaves, ou seja, ele vai ser como se fosse a nossa senha para conectar à instância com segurança. Clique em "Criar novo par de chaves". 
+
+<div align = "center">
+<sub> Figura 09 - Criando Par de Chaves  </sub>
+<img src="/assets/instancia4.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ao clicar, abrirá essa pequena tela pedindo o nome das suas chaves, o tipo e o formato. Irei colocar o nome como "keys", o tipo RSA e o formato do arquivo em .ppk para utilizar com o PuTTY (não se preocupe, iremos explicar no final de todo esse processo). Ao final, clique em "Criar par de chaves" e escolha em qual pasta você irá guardar o arquivo. **Lembre-se de guardar muito bem esse arquivo, pois ele será muito útil daqui a pouco**. 
+
+<div align = "center">
+<sub> Figura 10 - Configurações de rede </sub>
+<img src="/assets/instancia6.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+<div align = "center">
+<sub> Figura 11 - Configurações de rede </sub>
+<img src="/assets/instancia5.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;Agora, iremos configurar a rede. Iremos primeiro habilitar todas as opções do grupo de segurança e depois clicar em "Editar". 
+
+<div align = "center">
+<sub> Figura 12 - SSH </sub>
+<img src="/assets/instancia7.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ao clicar em Editar, a parte mais importante é verificar se um dos tipos habilitados é o **ssh** e o Tipo de origem é de **Qualquer lugar**. Lembre-se que ao lado em Origem, deve ter a marcação 0.0.0.0/0, pois significa que as regras com origem 0.0.0.0/0 permitem que todos os endereços IP acessem sua instância.
+
+<div align = "center">
+<sub> Figura 13 - Executar Instância </sub>
+<img src="/assets/instancia8.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Continuaremos com a mesma configuração de armazenamento e iremos clicar no lado direito inferior no botão "Executar instância". 
+
+<div align = "center">
+<sub> Figura 14 - Êxito ao Executar Instância </sub>
+<img src="/assets/instancia9.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Caso você visualize essa tela, PARABÉNS!!! Você criou a sua primeira instância dentro da AWS! Caso não tenha conseguido, não fique triste. Reveja todo o passo a passo da documentação e veja se não esqueceu de algo! Estamos aqui justamente para te ajudar. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;Agora, instale o PuTTY para acessarmos o SSH pelo cliente PuTTY SSH. 
+
+<div align = "center">
+<sub> Figura 15 - Configurações do PuTTY </sub>
+<img src="/assets/putty.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+<div align = "center">
+<sub> Figura 16 - Endereço de IP </sub>
+<img src="/assets/ip.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Em "Host Name", adicione o endereço de IP da sua instância. Depois, na barra lateral esquerda, clique no botão de "+" ao lado de "SSH", faça o mesmo para "Auth" e clique em "Credentials". 
+
+<div align = "center">
+<sub> Figura 17 - Private key </sub>
+<img src="/assets/key.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Clique no botão "Browse..." do Private key file for authentification e escolha **aquele par de chaves que salvamos nas primeiras etapas do processo de criação da instância**. Depois disso, clique em "Open" e "Accept". 
+
+<div align = "center">
+<sub> Figura 18 - Login </sub>
+<img src="/assets/login.png">
+
+<sup> Fonte: Material produzido pelos autores (2024) </sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ao entrar, o PuTTY irá pedir o seu login, onde você colocará "ec2-user". PARABÉNS! Sua autentificação foi concluída! 
+
