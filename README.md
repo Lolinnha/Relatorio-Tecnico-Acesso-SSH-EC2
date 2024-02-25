@@ -11,6 +11,7 @@
   - [Sumário](#sumário)
 - [1. Introdução](#1-introdução)
 - [2. Objetivo](#2-objetivo)
+- [3. Materiais](#3-materiais)
 
 
 # 1. Introdução 
@@ -31,4 +32,21 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Ao seguir o passo a passo, pode-se compreender os fundamentos para o acesso SSH em instâncias EC2 de forma segura e bem gerenciada. 
 
+# 3. Materiais
 
+&nbsp;&nbsp;&nbsp;&nbsp;Para compreender o acesso SSH em instâncias EC2 na AWS, é essencial estar familiarizado com os materiais que serão utilizados no processo, que são o SSH, EC2, AWS, PuTTY e GitHub. Cada um dos materiais desempenha um papel crucial na configuração e utilização segura das instâncias. A seguir, serão explorados detalhadamente cada um desses elementos: 
+
+1. SSH (Secure Shell): 
+&nbsp;&nbsp;&nbsp;&nbsp;Protocolo de rede que permite a comunicação segura entre os dispositivos, utilizado para acesso remoto a servidores e sistemas. Desta forma, o usuário acessa, controle e/ou transfere dados de uma maneira segura por meio de uma conexão criptografada. 
+
+2. EC2 (Elastic Compute Cloud):
+&nbsp;&nbsp;&nbsp;&nbsp;Serviço de computação em nuvem oferecido pela AWS que provisiona e executa máquinas virtuais, sendo altamente escaláveis e flexígeis em suas configurações e demandas de uso. 
+
+3. AWS (Amazon Web Services): 
+&nbsp;&nbsp;&nbsp;&nbsp;Plataforma de computação em nuvem presente globalmente que oferece serviços de infraestrutura, armazenamento e outros serviços. É possível gerenciar seus aplicativos na nuvem de forma flexível e escalável. 
+
+4. PuTTY: 
+&nbsp;&nbsp;&nbsp;&nbsp;Software que permite criar conexões com servidores e dispositivos remotamente. 
+
+5. GitHub: 
+&nbsp;&nbsp;&nbsp;&nbsp;Plataforma de hospedagem de código e utiliza o controle de versionamento do Git, auxliando no trabalho em conjunto de equipes de desenvolvedores. 
