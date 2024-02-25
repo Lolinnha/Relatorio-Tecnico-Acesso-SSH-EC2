@@ -13,6 +13,7 @@
 - [2. Objetivo](#2-objetivo)
 - [3. Materiais](#3-materiais)
 - [4. Método](#4-método)
+- [5. Conclusão](#5-conclusão)
 
 
 # 1. Introdução 
@@ -232,3 +233,8 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Ao entrar, o PuTTY irá pedir o seu login, onde você colocará "ec2-user". PARABÉNS! Sua autentificação foi concluída! 
 
+# 5. Conclusão
+
+&nbsp;&nbsp;&nbsp;&nbsp;Utilizar instâncias EC2 permite obter alta flexibilidade e escalabilidade para a computação em nuvem, fornecendo recursos computacionais de acordo com as necessidades do usuário. 
+&nbsp;&nbsp;&nbsp;&nbsp;Desta forma, o relatório forneceu um passo a passo para um acesso SSH a essas instâncias da AWS, passando pela configuração geral da instância, gerencimaneto de chaves e conexão ao PuTTY. 
+&nbsp;&nbsp;&nbsp;&nbsp;Ao ler o relatório, o usuário entenderá os procedimentos e poderão garantir um acesso seguro das instâncias na plataforma e aproveitar da melhor maneira possível os recursos da AWS. 
